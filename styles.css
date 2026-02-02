@@ -150,8 +150,19 @@ button {
 .header-nav-left {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 80px; /* Fixed 80px gap between 'INICIO' and 'CATÁLOGO' */
     justify-content: flex-start;
+    justify-self: start; /* Align to far left of grid cell */
+    width: auto; /* Don't stretch to fill available space */
+    margin-left: 0; /* Touch the left edge */
+    margin-right: auto; /* Push to far left */
+}
+
+/* Mobile: Reduce gap for smaller screens */
+@media (max-width: 1023px) {
+    .header-nav-left {
+        gap: 12px !important;
+    }
 }
 
 .header-nav-center {
@@ -165,6 +176,7 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
+    justify-self: center; /* Ensure logo stays centered in grid */
 }
 
 .logo-img {
@@ -176,8 +188,16 @@ button {
 .header-nav-right {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 30px; /* 30px gap between language switcher and cart icon */
     justify-content: flex-end;
+    justify-self: end; /* Align to far right of grid cell */
+    width: auto; /* Don't stretch to fill available space */
+}
+
+/* Language switcher on right side - ensure it's visible */
+.header-nav-right .language-switcher {
+    display: flex !important; /* Ensure language switcher is visible */
+    visibility: visible !important;
 }
 
 .search-icon-btn {
@@ -216,6 +236,28 @@ button {
 
 .nav-link:hover {
     opacity: 0.8;
+}
+
+/* Animated underline on hover for navigation links - Desktop only */
+@media (min-width: 768px) {
+    .header-nav-left .nav-link {
+        position: relative;
+    }
+
+    .header-nav-left .nav-link::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 1px;
+        bottom: -5px;
+        left: 0;
+        background-color: #B3B795; /* Olive green underline */
+        transition: width 0.3s ease;
+    }
+
+    .header-nav-left .nav-link:hover::after {
+        width: 100%;
+    }
 }
 
 .nav-separator {
@@ -494,7 +536,7 @@ body.menu-open {
     
     .header-main-nav {
         margin: 0 !important;
-        padding: 0 20px !important;
+        padding: 0 16px !important;
         grid-template-columns: 44px 1fr 44px; /* Hamburger | Logo | Cart */
         grid-template-rows: 1fr;
         height: 70px; /* Fixed height 70px */
@@ -545,7 +587,21 @@ body.menu-open {
         display: flex;
         grid-column: 3;
         justify-self: flex-end;
+        align-items: center; /* Ensure vertical alignment */
         gap: 8px;
+    }
+    
+    /* Ensure cart icon and language switcher are properly aligned */
+    .header-cart {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .language-switcher {
+        display: flex;
+        align-items: center;
+        gap: 4px;
     }
 }
 
@@ -570,6 +626,7 @@ body.menu-open {
     
     .header-nav-left {
         display: flex !important; /* Show navigation on desktop */
+        gap: 12px !important; /* Default gap for 768px-1023px screens */
     }
     
     .header-nav-center {
@@ -614,8 +671,9 @@ body.menu-open {
         height: 100%;
     }
     
-    .language-switcher {
-        display: none; /* Hide language switcher on mobile (can be added to menu if needed) */
+    /* Language switcher stays visible on mobile in header-nav-right */
+    .header-nav-right .language-switcher {
+        display: flex !important; /* Keep visible on mobile */
     }
     
     .nav-separator {
@@ -662,9 +720,7 @@ body.menu-open {
 }
 
 /* Hero Text Container - No Box, Text Sits Directly on Photo */
-.hero-text {
-    /* No background, borders, shadows, or padding - text sits directly on image */
-}
+/* .hero-text - No styles needed, text sits directly on image */
 
 .hero-eyebrow {
     font-family: 'Lato', sans-serif;
@@ -1142,26 +1198,49 @@ body.menu-open {
     gap: var(--spacing-lg);
 }
 
-/* Desktop: Restore 3-column grid */
+/* Desktop: Use flex for horizontal alignment */
 @media (min-width: 768px) {
     .features-grid {
-        display: grid !important; /* Ensure grid on desktop */
-        grid-template-columns: repeat(3, 1fr) !important; /* 3 columns on desktop */
+        display: flex !important; /* Use flex instead of grid */
+        flex-direction: row !important;
+        align-items: flex-start !important; /* Align items to top */
+        justify-content: center !important;
         gap: var(--spacing-lg);
     }
     
     .feature-card {
+        flex: 1 !important; /* Equal width for each card */
         padding: var(--spacing-xl) !important; /* Restore desktop padding */
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
     }
     
+    /* Create fixed-height container for icon - 60px tall wrapper */
     .feature-icon {
-        width: 40px !important; /* Restore desktop icon size */
+        width: 40px !important; /* Icon size */
         height: 40px !important;
-        margin: 0 auto 40px !important; /* Restore desktop spacing */
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        margin: 0 auto 40px !important;
+        flex-shrink: 0;
     }
     
+    /* Create fixed-height wrapper: use icon's container with fixed height */
+    .feature-card > .feature-icon {
+        min-height: 60px !important; /* Fixed height container ensures horizontal alignment */
+        height: 60px !important; /* Explicit height for container */
+        display: flex !important;
+        align-items: center !important; /* Center icon vertically in 60px container */
+        justify-content: center !important; /* Center icon horizontally */
+        margin-bottom: 40px !important;
+    }
+    
+    /* Ensure titles start at same height */
     .feature-title {
         font-size: 1.5rem !important; /* Restore desktop title size */
+        margin-top: 0 !important; /* Reset to ensure consistent start height */
         margin-bottom: var(--spacing-sm) !important;
     }
     
@@ -1177,23 +1256,24 @@ body.menu-open {
     }
 }
 
-/* Mobile: 3-column flex row for features (symmetry) */
+/* Mobile: Fix features section layout */
 @media (max-width: 767px) {
     .features-grid {
-        display: flex !important; /* Change from grid to flex */
-        justify-content: space-around !important; /* Space evenly */
-        gap: 10px;
-        flex-wrap: nowrap;
+        display: flex !important;
+        flex-direction: column !important; /* Stack vertically on mobile */
+        gap: 20px !important;
+        width: 100% !important;
     }
     
     .feature-card {
-        flex: 1 !important; /* Equal width for each block */
-        padding: 15px 5px; /* Reduced padding */
-        display: flex;
-        flex-direction: column;
-        align-items: center; /* Center-align everything */
-        text-align: center;
-        min-width: 0; /* Allow flex shrinking */
+        width: 100% !important; /* Full width on mobile */
+        padding: 20px 15px !important; /* Better padding */
+        display: flex !important;
+        flex-direction: column !important; /* Ensure column layout */
+        align-items: center !important; /* Center-align everything */
+        justify-content: center !important;
+        text-align: center !important;
+        box-sizing: border-box !important; /* Include padding in width */
     }
     
     .feature-icon {
@@ -1231,6 +1311,7 @@ body.menu-open {
     display: flex;
     flex-direction: column;
     align-items: center; /* Perfect center alignment */
+    justify-content: center; /* Add vertical centering */
 }
 
 .feature-card:hover {

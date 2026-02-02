@@ -1,0 +1,9 @@
+{
+  "name": "lumia-garcias",
+  "version": "1.0.0",
+  "description": "LUMIA Flores - Premium Floral Website",
+  "scripts": {
+    "dev": "npx http-server . -p 8080 -o"
+  },
+  "devDependencies": {}
+}

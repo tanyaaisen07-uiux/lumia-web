@@ -150,6 +150,7 @@ const products = [
         price: 38.00,
         image: './assets/product3.png'
     },
+    
     {
         id: 3,
         name: { es: 'Arreglo Elegante', en: 'Elegant Arrangement' },
