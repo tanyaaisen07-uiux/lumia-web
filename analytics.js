@@ -64,19 +64,22 @@
             track('home_viewed', { variant: forced.toUpperCase(), forced: true });
             return;
         }
-        if (consent() !== 'granted') { showVariant('A'); return; }
+        showVariant('A');                                       // default until flags arrive
+        if (consent() !== 'granted') return;
 
-        var done = false;
-        var fallback = setTimeout(function () {                // flags unreachable: stay on A
-            if (!done) { done = true; showVariant('A'); }
-        }, 2500);
+        // Flags may arrive late (slow network, or right after the visitor accepts cookies).
+        // Apply the variant whenever they arrive, exactly once per page view.
+        var resolved = false;
         posthog.onFeatureFlags(function () {
-            if (done) return;
-            done = true; clearTimeout(fallback);
-            var v = posthog.getFeatureFlag(FLAG) === 'test' ? 'B' : 'A'; // also logs exposure
+            if (resolved) return;
+            var flag = posthog.getFeatureFlag(FLAG);           // also logs the exposure
+            if (flag === undefined) return;                     // not ready yet, wait for next load
+            resolved = true;
+            var v = flag === 'test' ? 'B' : 'A';
             showVariant(v);
             track('home_viewed', { variant: v, lang: lang() });
         });
+        posthog.reloadFeatureFlags();                           // make sure flags are requested
     }
 
     /* ---------- page events ---------- */
@@ -156,7 +159,7 @@
             posthog.opt_in_capturing();
             box.remove();
             posthog.register({ lang: lang() });
-            runExperiment();
+            runExperiment();                                    // also requests the flags
             pageEvents();
         });
         box.querySelector('.no').addEventListener('click', function () {
