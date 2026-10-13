@@ -141,14 +141,14 @@ const products = [
         name: { es: 'Ramo de Rosas Rojas', en: 'Red Roses Bouquet' },
         description: { es: 'Un clásico atemporal que expresa amor y pasión. Rosas rojas frescas cuidadosamente seleccionadas.', en: 'A timeless classic that expresses love and passion. Fresh red roses carefully selected.' },
         price: 45.00,
-        image: './assets/product1.png'
+        image: './assets/product1.webp'
     },
     {
         id: 2,
         name: { es: 'Ramo Primaveral', en: 'Spring Bouquet' },
         description: { es: 'Una explosión de colores primaverales con tulipanes, margaritas y flores silvestres.', en: 'A burst of spring colors with tulips, daisies, and wildflowers.' },
         price: 38.00,
-        image: './assets/product3.png'
+        image: './assets/product3.webp'
     },
     
     {
@@ -156,196 +156,196 @@ const products = [
         name: { es: 'Arreglo Elegante', en: 'Elegant Arrangement' },
         description: { es: 'Liliums blancos y rosas rosadas en un arreglo sofisticado y elegante.', en: 'White lilies and pink roses in a sophisticated and elegant arrangement.' },
         price: 52.00,
-        image: './assets/product4.png'
+        image: './assets/product4.webp'
     },
     {
         id: 4,
         name: { es: 'Ramo Romántico', en: 'Romantic Bouquet' },
         description: { es: 'Rosas rosadas y peonías en tonos suaves que transmiten dulzura y romanticismo.', en: 'Pink roses and peonies in soft tones that convey sweetness and romance.' },
         price: 48.00,
-        image: './assets/product5.png'
+        image: './assets/product5.webp'
     },
     {
         id: 5,
         name: { es: 'Arreglo Exótico', en: 'Exotic Arrangement' },
         description: { es: 'Orquídeas y flores tropicales que añaden un toque exótico y sofisticado.', en: 'Orchids and tropical flowers that add an exotic and sophisticated touch.' },
         price: 65.00,
-        image: './assets/product6.png'
+        image: './assets/product6.webp'
     },
     {
         id: 6,
         name: { es: 'Ramo de Girasoles', en: 'Sunflower Bouquet' },
         description: { es: 'Girasoles brillantes que traen alegría y energía positiva a cualquier espacio.', en: 'Bright sunflowers that bring joy and positive energy to any space.' },
         price: 35.00,
-        image: './assets/product7.png'
+        image: './assets/product7.webp'
     },
     {
         id: 7,
         name: { es: 'Arreglo Minimalista', en: 'Minimalist Arrangement' },
         description: { es: 'Diseño limpio y moderno con flores blancas y verdes en un estilo minimalista.', en: 'Clean and modern design with white and green flowers in a minimalist style.' },
         price: 42.00,
-        image: './assets/product8.png'
+        image: './assets/product8.webp'
     },
     {
         id: 8,
         name: { es: 'Ramo de Lavanda', en: 'Lavender Bouquet' },
         description: { es: 'Lavanda fresca que aporta calma y serenidad con su aroma relajante.', en: 'Fresh lavender that brings calm and serenity with its relaxing aroma.' },
         price: 40.00,
-        image: './assets/product9.png'
+        image: './assets/product9.webp'
     },
     {
         id: 9,
         name: { es: 'Arreglo Festivo', en: 'Festive Arrangement' },
         description: { es: 'Una combinación vibrante de flores de temporada perfecta para celebraciones.', en: 'A vibrant combination of seasonal flowers perfect for celebrations.' },
         price: 55.00,
-        image: './assets/product10.png'
+        image: './assets/product10.webp'
     },
     {
         id: 10,
         name: { es: 'Ramo Clásico', en: 'Classic Bouquet' },
         description: { es: 'Rosas blancas y rojas en un arreglo clásico que nunca pasa de moda.', en: 'White and red roses in a classic arrangement that never goes out of style.' },
         price: 50.00,
-        image: './assets/product11.png'
+        image: './assets/product11.webp'
     },
     {
         id: 11,
         name: { es: 'Arreglo Delicado', en: 'Delicate Arrangement' },
         description: { es: 'Peonías y rosas en tonos pastel que crean una atmósfera suave y delicada.', en: 'Peonies and roses in pastel tones that create a soft and delicate atmosphere.' },
         price: 58.00,
-        image: './assets/product12.png'
+        image: './assets/product12.webp'
     },
     {
         id: 12,
         name: { es: 'Ramo de Campo', en: 'Wildflower Bouquet' },
         description: { es: 'Flores silvestres naturales que evocan la belleza del campo y la naturaleza.', en: 'Natural wildflowers that evoke the beauty of the countryside and nature.' },
         price: 32.00,
-        image: './assets/product13.png'
+        image: './assets/product13.webp'
     },
     {
         id: 13,
         name: { es: 'Arreglo Premium', en: 'Premium Arrangement' },
         description: { es: 'Una selección exclusiva de las mejores flores en un arreglo de lujo.', en: 'An exclusive selection of the finest flowers in a luxury arrangement.' },
         price: 75.00,
-        image: './assets/product14.png'
+        image: './assets/product14.webp'
     },
     {
         id: 14,
         name: { es: 'Caja Regalo LUMIA', en: 'LUMIA Gift Box' },
         description: { es: 'Una elegante caja regalo con el logo LUMIA. Perfecta para añadir a cualquier ramo o como regalo independiente. Embalaje premium que refleja la identidad de nuestra marca.', en: 'An elegant gift box with the LUMIA logo. Perfect to add to any bouquet or as a standalone gift. Premium packaging that reflects our brand identity.' },
         price: 25.00,
-        image: './assets/regalo_product15.png'
+        image: './assets/regalo_product15.webp'
     },
     {
         id: 15,
         name: { es: 'Arreglo Elegante Blanco', en: 'Elegant White Arrangement' },
         description: { es: 'Flores blancas puras en un arreglo elegante y sofisticado para ocasiones especiales.', en: 'Pure white flowers in an elegant and sophisticated arrangement for special occasions.' },
         price: 60.00,
-        image: './assets/product16.png'
+        image: './assets/product16.webp'
     },
     {
         id: 16,
         name: { es: 'Ramo de Margaritas', en: 'Daisy Bouquet' },
         description: { es: 'Margaritas frescas y alegres que transmiten simplicidad y felicidad.', en: 'Fresh and cheerful daisies that convey simplicity and happiness.' },
         price: 28.00,
-        image: './assets/product17.png'
+        image: './assets/product17.webp'
     },
     {
         id: 17,
         name: { es: 'Arreglo Moderno', en: 'Modern Arrangement' },
         description: { es: 'Diseño contemporáneo con flores exóticas y follaje moderno.', en: 'Contemporary design with exotic flowers and modern foliage.' },
         price: 68.00,
-        image: './assets/product18.png'
+        image: './assets/product18.webp'
     },
     {
         id: 18,
         name: { es: 'Ramo de Tulipanes', en: 'Tulip Bouquet' },
         description: { es: 'Tulipanes vibrantes en múltiples colores que anuncian la llegada de la primavera.', en: 'Vibrant tulips in multiple colors that herald the arrival of spring.' },
         price: 40.00,
-        image: './assets/product19.png'
+        image: './assets/product19.webp'
     },
     {
         id: 19,
         name: { es: 'Arreglo Lujoso', en: 'Luxury Arrangement' },
         description: { es: 'Una combinación exclusiva de flores premium en un arreglo de máxima calidad.', en: 'An exclusive combination of premium flowers in a top-quality arrangement.' },
         price: 85.00,
-        image: './assets/product20.png'
+        image: './assets/product20.webp'
     },
     {
         id: 20,
         name: { es: 'Ramo de Peonías', en: 'Peony Bouquet' },
         description: { es: 'Peonías exuberantes en tonos rosados que desprenden elegancia y feminidad.', en: 'Lush peonies in pink tones that exude elegance and femininity.' },
         price: 55.00,
-        image: './assets/product21.png'
+        image: './assets/product21.webp'
     },
     {
         id: 21,
         name: { es: 'Arreglo Natural', en: 'Natural Arrangement' },
         description: { es: 'Flores y follaje natural que recrean la belleza del jardín en tu hogar.', en: 'Natural flowers and foliage that recreate the beauty of the garden in your home.' },
         price: 45.00,
-        image: './assets/product22.png'
+        image: './assets/product22.webp'
     },
     {
         id: 22,
         name: { es: 'Ramo de Orquídeas', en: 'Orchid Bouquet' },
         description: { es: 'Orquídeas exóticas que añaden un toque de sofisticación y elegancia.', en: 'Exotic orchids that add a touch of sophistication and elegance.' },
         price: 70.00,
-        image: './assets/product23.png'
+        image: './assets/product23.webp'
     },
     {
         id: 23,
         name: { es: 'Arreglo Colorido', en: 'Colorful Arrangement' },
         description: { es: 'Una paleta vibrante de colores que llena de energía y alegría cualquier espacio.', en: 'A vibrant palette of colors that fills any space with energy and joy.' },
         price: 48.00,
-        image: './assets/product24.png'
+        image: './assets/product24.webp'
     },
     {
         id: 24,
         name: { es: 'Ramo de Lirios', en: 'Lily Bouquet' },
         description: { es: 'Lirios elegantes que desprenden un aroma delicado y una belleza única.', en: 'Elegant lilies that exude a delicate aroma and unique beauty.' },
         price: 50.00,
-        image: './assets/product25.png'
+        image: './assets/product25.webp'
     },
     {
         id: 25,
         name: { es: 'Arreglo Rustico', en: 'Rustic Arrangement' },
         description: { es: 'Flores de campo y follaje natural en un estilo rústico y acogedor.', en: 'Field flowers and natural foliage in a rustic and cozy style.' },
         price: 38.00,
-        image: './assets/product26.png'
+        image: './assets/product26.webp'
     },
     {
         id: 26,
         name: { es: 'Ramo de Alstroemerias', en: 'Alstroemeria Bouquet' },
         description: { es: 'Alstroemerias duraderas en colores vibrantes que alegran durante días.', en: 'Long-lasting alstroemerias in vibrant colors that brighten for days.' },
         price: 35.00,
-        image: './assets/product27.png'
+        image: './assets/product27.webp'
     },
     {
         id: 27,
         name: { es: 'Arreglo Sofisticado', en: 'Sophisticated Arrangement' },
         description: { es: 'Diseño refinado con flores premium en una composición sofisticada.', en: 'Refined design with premium flowers in a sophisticated composition.' },
         price: 72.00,
-        image: './assets/product28.png'
+        image: './assets/product28.webp'
     },
     {
         id: 28,
         name: { es: 'Ramo de Crisantemos', en: 'Chrysanthemum Bouquet' },
         description: { es: 'Crisantemos en múltiples colores que simbolizan longevidad y felicidad.', en: 'Chrysanthemums in multiple colors that symbolize longevity and happiness.' },
         price: 42.00,
-        image: './assets/product29.png'
+        image: './assets/product29.webp'
     },
     {
         id: 29,
         name: { es: 'Arreglo Exclusivo', en: 'Exclusive Arrangement' },
         description: { es: 'Una selección única de flores raras y exóticas en un arreglo exclusivo.', en: 'A unique selection of rare and exotic flowers in an exclusive arrangement.' },
         price: 90.00,
-        image: './assets/product30.png'
+        image: './assets/product30.webp'
     },
     {
         id: 30,
         name: { es: 'Ramo de Rosas Mixtas', en: 'Mixed Roses Bouquet' },
         description: { es: 'Una combinación armoniosa de rosas en diferentes colores y variedades.', en: 'A harmonious combination of roses in different colors and varieties.' },
         price: 52.00,
-        image: './assets/product31.png'
+        image: './assets/product31.webp'
     }
 ];
 

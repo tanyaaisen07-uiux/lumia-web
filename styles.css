@@ -708,7 +708,7 @@ body.menu-open {
         to right,
         rgba(242, 229, 213, 0.8) 0%,
         rgba(242, 229, 213, 0) 60%
-    ), url('./assets/florist3.png');
+    ), url('./assets/florist3.webp');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center 10%; /* Ensure florist's head has space and is not cut off */
@@ -805,7 +805,7 @@ body.menu-open {
             to bottom,
             rgba(0, 0, 0, 0) 0%,
             rgba(0, 0, 0, 0.4) 100%
-        ), url('./assets/florist3.png');
+        ), url('./assets/florist3.webp');
         position: relative;
     }
     
