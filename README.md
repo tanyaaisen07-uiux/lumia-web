@@ -1,6 +1,6 @@
 # LUMIA Flores: E-commerce Website
 
-Client project: responsive e-commerce website for LUMIA Flores, a flower delivery business in Spain. Bilingual interface (ES/EN).
+Responsive e-commerce website for a flower delivery business, bilingual interface (ES/EN). Based on a client project (Spain). Brand name and data changed for confidentiality.
 I designed it in Figma and built it myself with HTML, CSS and JavaScript.
 
 **Live demo:** https://tanyaaisen07-uiux.github.io/lumia-web/
