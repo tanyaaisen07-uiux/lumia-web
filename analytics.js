@@ -5,6 +5,7 @@
      flag key  : home-bestsellers
      control   : version A (no bestsellers block)
      test      : version B (bestsellers block under the hero)
+     status    : FINISHED, version B won and is now shown to everyone
 
    Tracking starts only after the visitor accepts analytics cookies.
    Without consent everyone sees version A and nothing is sent.
@@ -64,22 +65,9 @@
             track('home_viewed', { variant: forced.toUpperCase(), forced: true });
             return;
         }
-        showVariant('A');                                       // default until flags arrive
-        if (consent() !== 'granted') return;
-
-        // Flags may arrive late (slow network, or right after the visitor accepts cookies).
-        // Apply the variant whenever they arrive, exactly once per page view.
-        var resolved = false;
-        posthog.onFeatureFlags(function () {
-            if (resolved) return;
-            var flag = posthog.getFeatureFlag(FLAG);           // also logs the exposure
-            if (flag === undefined) return;                     // not ready yet, wait for next load
-            resolved = true;
-            var v = flag === 'test' ? 'B' : 'A';
-            showVariant(v);
-            track('home_viewed', { variant: v, lang: lang() });
-        });
-        posthog.reloadFeatureFlags();                           // make sure flags are requested
+        // Experiment finished: version B (bestsellers block) won and ships to everyone.
+        showVariant('B');
+        track('home_viewed', { variant: 'B', shipped: true, lang: lang() });
     }
 
     /* ---------- page events ---------- */
