@@ -921,7 +921,7 @@ body.menu-open {
     background: #6A7562;
     color: #F2E5D5;
     border: none;
-    border-radius: 4px; /* Very slight rounding */
+    border-radius: 6px;
     padding: 12px 24px;
     font-size: 13px;
     font-weight: 500;
@@ -944,7 +944,7 @@ body.menu-open {
     background: transparent;
     color: #6A7562;
     border: 1px solid #6A7562;
-    border-radius: 4px; /* Very slight rounding */
+    border-radius: 6px;
     padding: 12px 24px;
     font-size: 13px;
     font-weight: 400;
@@ -1505,7 +1505,7 @@ body.menu-open {
         color: #6A7562;
         border: none;
         border-bottom: 1px solid #6A7562;
-        border-radius: 0;
+        border-radius: 6px;
         text-decoration: none;
         text-align: left;
         width: auto;
@@ -1530,7 +1530,7 @@ body.menu-open {
     color: #6A7562;
     border: none;
     border-bottom: 1px solid #6A7562;
-    border-radius: 0;
+    border-radius: 6px;
     transition: var(--transition);
     cursor: pointer;
     text-decoration: none;
@@ -1679,7 +1679,7 @@ body.menu-open {
     font-weight: 400;
     font-size: 0.9rem;
     border: none;
-    border-radius: 0;
+    border-radius: 6px;
     text-align: center;
     text-decoration: none;
     transition: opacity 0.3s ease;
@@ -1701,7 +1701,7 @@ body.menu-open {
     font-family: 'Lato', sans-serif;
     font-weight: 400;
     font-size: 0.9rem;
-    border-radius: 0;
+    border-radius: 6px;
     text-align: center;
     text-decoration: none;
     transition: opacity 0.3s ease;
@@ -2496,7 +2496,7 @@ body.menu-open {
         background: #6A7562;
         color: #FFFFFF;
         border: none;
-        border-radius: 8px;
+        border-radius: 6px;
         height: 44px;
         padding: 0 24px;
         font-family: 'Lato', sans-serif;
@@ -2622,4 +2622,44 @@ body.menu-open {
 
 @media (prefers-reduced-motion: reduce) {
     .portfolio-back { transition: none; }
+}
+
+
+/* ============================================
+   FEATURE ICONS + SCROLL REVEAL (Nov 2026)
+   ============================================ */
+.feature-icon-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 32px;
+    border-radius: 50%;
+    background: #FDFAF4;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.feature-icon-wrap .feature-icon {
+    width: 28px !important;
+    height: 28px !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+}
+.feature-card:hover .feature-icon-wrap {
+    transform: scale(1.1);
+    background: #FFFFFF;
+}
+.reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.is-visible {
+    opacity: 1;
+    transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+    .feature-icon-wrap { transition: none; }
+    .feature-card:hover .feature-icon-wrap { transform: none; }
+    .reveal { opacity: 1; transform: none; transition: none; }
 }
