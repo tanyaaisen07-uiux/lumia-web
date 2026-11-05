@@ -2623,3 +2623,43 @@ body.menu-open {
 @media (prefers-reduced-motion: reduce) {
     .portfolio-back { transition: none; }
 }
+
+
+/* ============================================
+   FEATURE ICONS + SCROLL REVEAL (Nov 2026)
+   ============================================ */
+.feature-icon-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 32px;
+    border-radius: 50%;
+    background: #FDFAF4;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.feature-icon-wrap .feature-icon {
+    width: 28px !important;
+    height: 28px !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+}
+.feature-card:hover .feature-icon-wrap {
+    transform: scale(1.1);
+    background: #FFFFFF;
+}
+.reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.is-visible {
+    opacity: 1;
+    transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+    .feature-icon-wrap { transition: none; }
+    .feature-card:hover .feature-icon-wrap { transform: none; }
+    .reveal { opacity: 1; transform: none; transition: none; }
+}
